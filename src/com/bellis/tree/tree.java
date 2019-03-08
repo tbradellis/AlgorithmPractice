@@ -10,8 +10,7 @@ class Node {
    public Node leftChild;         // this node's left child
    public Node rightChild;        // this node's right child
 
-   public void displayNode()      // display yourself
-      {
+   public void displayNode() {
       System.out.print('{');
       System.out.print(iData);
       System.out.print(", ");
@@ -306,7 +305,7 @@ class TreeApp {
                theTree.displayTree();
                break;
             case 'i':
-               System.out.print("Enter value to insert: ");
+               System.out.print("Enter a value to insert: ");
                value = getInt();
                theTree.insert(value, value + 0.9);
                break;
@@ -347,16 +346,12 @@ class TreeApp {
 
 
 
-
-
-   public static String getString() throws IOException
-      {
-      InputStreamReader isr = new InputStreamReader(System.in);
-      BufferedReader br = new BufferedReader(isr);
-      String s = br.readLine();
+   public static String getString() throws IOException{
+      InputStreamReader iReader = new InputStreamReader(System.in);
+      BufferedReader bReader = new BufferedReader(iReader);
+      String s = bReader.readLine();
       return s;
-      }
-
+   }
 
 
 
