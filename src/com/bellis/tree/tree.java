@@ -344,7 +344,25 @@ class TreeApp {
          }  // end while
       }
 
+   // adding method to take a string and return chars
+   //will need the individual chars to
+   //TODO: Probably in another branch as separate MMF - Exception Handling
+   // can this be made into a stream and then mapped? Would that be better
+   //consult Java Book
+   //Looking at trade-offs for exception handling/throwing with the input reads
+   //may just eliminate need to worry by forcing user to retry if not the
+   //correct input
+   //regardless of either, I think iReader and bReader should have some type of
+   //check. Maybe with try
+   //
 
+   public static char[] getCharFromString() throws IOException {
+      InputStreamReader isr = new InputStreamReader(System.in);
+      BufferedReader br = new BufferedReader(isr);
+      String s = br.readLine();
+      char[] chars =s.toCharArray();
+      return chars;
+   }
 
    public static String getString() throws IOException{
       InputStreamReader iReader = new InputStreamReader(System.in);
